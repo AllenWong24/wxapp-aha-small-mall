@@ -1,0 +1,49 @@
+page {
+  margin-bottom: 50rpx;
+}
+.index-swiper-wrap .index-swiper {
+  height: 340rpx;
+}
+.index-swiper-wrap .index-swiper .index-swiper-item navigator {
+  width: 100%;
+  height: 100%;
+}
+.index-catitems-wrap {
+  display: flex;
+}
+.index-catitems-wrap navigator {
+  flex: 1;
+  padding: 20rpx;
+}
+.index-catitems-wrap navigator image {
+  width: 100%;
+}
+.index-floor-wrap .floor-title {
+  padding: 10rpx 0;
+}
+.index-floor-wrap .floor-title image {
+  width: 100%;
+}
+.index-floor-wrap .floor-content {
+  overflow: hidden;
+  padding: 10rpx;
+}
+.index-floor-wrap .floor-content navigator {
+  float: left;
+  width: 33.33%;
+  height: 400rpx;
+  /* 后四个超链接 */
+  /* 2 3 两个超链接 */
+}
+.index-floor-wrap .floor-content navigator:nth-last-child(-n+4) {
+  height: 200rpx;
+  border-left: 10rpx solid #fff;
+}
+.index-floor-wrap .floor-content navigator:nth-child(2),
+.index-floor-wrap .floor-content navigator:nth-child(3) {
+  border-bottom: 10rpx solid #fff;
+}
+.index-floor-wrap .floor-content navigator image {
+  width: 100%;
+  height: 100%;
+}

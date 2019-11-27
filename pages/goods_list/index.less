@@ -1,0 +1,34 @@
+.tabs-content {
+  width: 100%;
+  display: flex;
+  border-bottom: 2rpx solid #ccc;
+  margin: 20rpx 0;
+  .tabs-content_left {
+    flex: 1;
+    padding: 20rpx 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    image {
+      width: 70%;
+    }
+  }
+
+  .tabs-content_right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .good-name {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp:2;
+    }
+
+    .good-price {
+      color: var(--themeColor);
+      font-size: 40rpx;
+    }
+  }
+}

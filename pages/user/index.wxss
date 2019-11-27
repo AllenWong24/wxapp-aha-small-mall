@@ -1,0 +1,136 @@
+page {
+  background-color: #edece8;
+}
+.user .user_icon {
+  width: 100%;
+  height: 40vh;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.user .user_icon .user_icon_circle {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 150rpx;
+  width: 150rpx;
+}
+.user .user_icon .user_icon_circle image {
+  width: 100%;
+  border-radius: 75rpx;
+}
+.user .user_icon .user_icon_circle button {
+  width: 100%;
+  height: 100%;
+  font-size: 25rpx;
+  color: var(--themeColor);
+  padding: 0;
+  border: 1rpx solid currentColor;
+  line-height: 150rpx;
+  border-radius: 75rpx;
+}
+.user .user_icon .user_nickName {
+  color: #fff;
+  font-size: 40rpx;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.user .user_icon .background-icon {
+  filter: blur(10px);
+}
+.user .other-content {
+  width: 100%;
+  position: relative;
+  top: -50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user .other-content .history {
+  display: flex;
+  text-align: center;
+  padding: 20rpx;
+  width: 95%;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+.user .other-content .history .history_item {
+  flex: 1;
+}
+.user .other-content .history .history_item .num {
+  color: var(--themeColor);
+}
+.user .other-content .history .history_item .text {
+  color: #666;
+}
+.user .other-content .order {
+  background-color: #fff;
+  width: 95%;
+  margin-bottom: 30rpx;
+}
+.user .other-content .order .title {
+  font-size: 35rpx;
+  padding: 20rpx;
+  color: #666;
+  border-bottom: 1rpx solid #ccc;
+  margin-bottom: 20rpx;
+}
+.user .other-content .order .content {
+  display: flex;
+  text-align: center;
+  padding: 20rpx;
+}
+.user .other-content .order .content .order_item {
+  flex: 1;
+}
+.user .other-content .order .content .order_item .iconfont {
+  color: var(--themeColor);
+  font-size: 50rpx;
+}
+.user .other-content .order .content .order_item .text {
+  color: #666;
+}
+.user .other-content .address,
+.user .other-content .recommend {
+  background-color: #fff;
+  width: 95%;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.user .other-content .address view,
+.user .other-content .recommend view {
+  padding: 20rpx;
+  flex: 1;
+  color: #666;
+}
+.user .other-content .address view:nth-child(2),
+.user .other-content .recommend view:nth-child(2) {
+  text-align: right;
+  color: #ccc;
+}
+.user .other-content .contact {
+  background-color: #fff;
+  width: 95%;
+  margin-bottom: 30rpx;
+}
+.user .other-content .contact .contact_item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #ccc;
+}
+.user .other-content .contact .contact_item view {
+  padding: 20rpx;
+  flex: 1;
+  color: #666;
+}
+.user .other-content .contact .contact_item view:nth-child(2) {
+  text-align: right;
+  color: #ccc;
+}
+.user .other-content .contact .contact_item #phone {
+  color: #666;
+}

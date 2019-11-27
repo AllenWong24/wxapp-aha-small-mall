@@ -1,0 +1,34 @@
+<!-- 搜索框 -->
+<search></search>
+<!-- 搜索框END -->
+
+<view class="category-wrap">
+  <view class="category-left">
+    <scroll-view scroll-y="true" scroll-top="0">
+      <view class="category-left_item {{index===currentIndex?'active':''}}" wx:for="{{leftMenu}}" wx:key="*this"
+        bindtap="handleTap" data-index="{{index}}">
+        {{item}}
+      </view>
+    </scroll-view>
+  </view>
+  <view class="category-right">
+    <scroll-view scroll-y="true" scroll-top="{{scrollTop}}">
+      <block wx:for="{{rightContent}}" wx:key="item.cat_id">
+        <view class="category-right_title">
+          <text>/</text>
+          <text>{{item.cat_name}}</text>
+          <text>/</text>
+        </view>
+        <view class="category-right_content">
+          <navigator class="category-right_content_item" wx:for="{{item.children}}" wx:for-item="child"
+            wx:key="{{child.cat_id}}" url="/pages/goods_list/index?cid={{child.cat_id}}">
+            <image src="{{child.cat_icon}}" mode="scaleToFill" lazy-load></image>
+            <text class="">
+              {{child.cat_name}}
+            </text>
+          </navigator>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

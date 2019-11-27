@@ -1,0 +1,14 @@
+<view class="tabs">
+  <view class="tabs_title">
+    <view class="tabs_title_item {{item.active?'active':''}}"
+      wx:for="{{titleItem}}"
+      wx:key="{{item.id}}"
+      bindtap="handleTap"
+      data-index="{{index}}">
+      {{item.value}}
+    </view>
+  </view>
+  <view class="tabs_content">
+    <slot></slot>
+  </view>
+</view>

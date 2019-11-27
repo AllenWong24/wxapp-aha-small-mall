@@ -1,0 +1,92 @@
+<view class="user">
+  <!-- 头像 -->
+  <view class="user_icon">
+    <image class="background-icon" src="{{userInfo.icon}}" mode="widthFix"></image>
+    <view class="user_icon_circle">
+      <image wx:if="{{userInfo.icon}}" src="{{userInfo.icon}}" mode="widthFix"></image>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" plain>授权登陆</button>
+    </view>
+    <view class="user_nickName">{{userInfo.nickName}}</view>
+  </view>
+  <!-- 头像END -->
+
+  <!-- 其他内容 -->
+  <view class="other-content">
+    <!-- 浏览历史 -->
+    <view class="history">
+      <view class="history_item">
+        <view class="num">0</view>
+        <view class="text">收藏的店铺</view>
+      </view>
+      <view class="history_item">
+        <view class="num">{{collectionNum}}</view>
+        <view class="text">收藏的商品</view>
+      </view>
+      <view class="history_item">
+        <view class="num">0</view>
+        <view class="text">关注的商品</view>
+      </view>
+      <view class="history_item">
+        <view class="num">0</view>
+        <view class="text">我的足迹</view>
+      </view>
+    </view>
+    <!-- 浏览历史END -->
+
+    <!-- 订单 -->
+    <view class="order">
+      <view class="title">我的订单</view>
+      <view class="content">
+        <view class="order_item">
+          <text class="iconfont icon-6"></text>
+          <view class="text">全部订单</view>
+        </view>
+        <view class="order_item">
+          <text class="iconfont icon-gouwuche"></text>
+          <view class="text">待付款</view>
+        </view>
+        <view class="order_item">
+          <text class="iconfont icon-huoche"></text>
+          <view class="text">待收货</view>
+        </view>
+        <view class="order_item">
+          <text class="iconfont icon-tuihuotuikuan_dianpu"></text>
+          <view class="text">退款/退货</view>
+        </view>
+      </view>
+    </view>
+    <!-- 订单END -->
+
+    <!-- 收货地址 -->
+    <view class="address">
+      <view>管理收货地址</view>
+      <view>></view>
+    </view>
+    <!-- 收货地址END -->
+
+    <!-- 联系 -->
+    <view class="contact">
+      <view class="contact_item">
+        <view>联系客服</view>
+        <view id="phone">400-618-4000</view>
+      </view>
+      <view class="contact_item">
+        <view>意见反馈</view>
+        <view>></view>
+      </view>
+      <view class="contact_item">
+        <view>关于我们</view>
+        <view>></view>
+      </view>
+    </view>
+    <!-- 联系END -->
+
+    <!-- 推荐 -->
+    <view class="recommend">
+      <view>把应用推荐给其他人</view>
+      <view>></view>
+    </view>
+    <!-- 推荐END -->
+  </view>
+  <!-- 其他内容END -->
+</view>

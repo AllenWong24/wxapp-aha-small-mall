@@ -1,0 +1,67 @@
+page {
+  margin-bottom: 50rpx;
+}
+
+.index-swiper-wrap {
+  .index-swiper {
+    height: 340rpx;
+
+    .index-swiper-item {
+      navigator {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.index-catitems-wrap {
+  display: flex;
+
+  navigator {
+    flex: 1;
+    padding: 20rpx;
+
+    image {
+      width: 100%;
+    }
+  }
+}
+
+.index-floor-wrap {
+  .floor-title {
+    padding: 10rpx 0;
+
+    image {
+      width: 100%;
+    }
+  }
+
+  .floor-content {
+    overflow: hidden;
+    padding: 10rpx;
+
+    navigator {
+      float: left;
+      width: 33.33%;
+      height: 400rpx;
+
+      /* 后四个超链接 */
+      &:nth-last-child(-n+4) {
+        height: 200rpx;
+        border-left: 10rpx solid #fff;
+      }
+
+      /* 2 3 两个超链接 */
+      &:nth-child(2),
+      &:nth-child(3) {
+        border-bottom: 10rpx solid #fff;
+      }
+
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

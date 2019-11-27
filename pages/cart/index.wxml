@@ -1,0 +1,67 @@
+<!-- 地址 -->
+<view class="address">
+  <button wx:if="{{!address}}" type="default" bindtap="handleChooseAddress">+添加收货地址</button>
+  <view wx:else class="address_name-phone-box">
+    <view class="address_name">收货人：{{address.userName}}</view>
+    <view class="address_phone">{{address.telNumber}}</view>
+  </view>
+  <view class="address_all">
+    {{address.all}}
+  </view>
+</view>
+<!-- 地址END -->
+
+<!-- 购物车 -->
+<view class="shopping-cart">
+  <view class="shopping-cart_title">购物车</view>
+  <block wx:if="{{shoppingCart.length!==0}}">
+    <view class="shopping-cart_item"
+      wx:for="{{shoppingCart}}"
+      wx:key="{{item.goods_id}}">
+      <view class="shopping-cart_item_check">
+        <checkbox-group bindchange="checkboxItemChange" data-id="{{item.goods_id}}">
+          <checkbox checked="{{item.checked}}" />
+        </checkbox-group>
+      </view>
+      <view class="shopping-cart_item_left">
+        <image src="{{item.goods_iamge}}" mode="widthFix"></image>
+      </view>
+      <view class="shopping-cart_item_right">
+        <view class="shopping-cart_item_name">{{item.goods_name}}</view>
+        <view class="shopping-cart_item_price-box">
+          <view class="shopping-cart_item_price">￥{{item.goods_price}}</view>
+          <view class="shopping-cart_item_count">
+            <view class="num-edit" bindtap="handleNumEdit" data-id="{{item.goods_id}}" data-operation="1">+</view>
+            <view class="num">{{item.count}}</view>
+            <view class="num-edit" bindtap="handleNumEdit" data-id="{{item.goods_id}}" data-operation="-1">-</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="shopping-cart_item-empty">
+      <image src="/icons/data-empty.png" mode="widthFix"></image>
+      <view>您的购物车空空如也 ╮(￣▽￣)╭ </view>
+    </view>
+  </block>
+</view>
+<!-- 购物车END -->
+
+<!-- 结算栏 -->
+<view class="checkout">
+  <view class="checkout_all-checked">
+    <checkbox-group bindchange="checkboxAllChecked">
+      <checkbox checked="{{item.checked}}" />全选
+    </checkbox-group>
+  </view>
+  <view class="checkout_amount">
+    <view>
+      <text>合计：</text>
+      <text>￥{{amount}}</text>
+    </view>
+    <view>包含运费</view>
+  </view>
+  <view class="checkout_btn" bindtap="handleBuy">结算({{total}})</view>
+</view>
+<!-- 结算栏END -->

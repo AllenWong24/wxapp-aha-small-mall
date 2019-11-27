@@ -1,0 +1,21 @@
+<!-- 搜索框 -->
+<search></search>
+<!-- 搜索框END -->
+
+<!-- tabs栏 -->
+<tabs title="{{tabsTitle}}" bindcontentChange="handleContentChange">
+  <navigator class="tabs-content"
+    wx:for="{{goodsList}}"
+    wx:key="{{item.goods_id}}"
+    url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+    <view class="tabs-content_left">
+      <image src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}" mode="widthFix" lazy-load="true" />
+    </view>
+    <view class="tabs-content_right">
+      <view class="good-name">{{item.goods_name}}</view>
+      <view class="good-price">￥{{item.goods_price}}</view>
+    </view>
+  </navigator>
+</tabs>
+<!-- tabs栏END -->
+
