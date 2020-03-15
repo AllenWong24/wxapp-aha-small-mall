@@ -10,7 +10,7 @@ export const request = function (params) {
     });
     requestTimes++;
     wx.request({
-      url: 'https://api.zbztb.cn/api/public/v1' + params.url,
+      url: 'https://api-hmugo-web.itheima.net/api/public/v1' + params.url,
       data: {
         ...params.data
       },
