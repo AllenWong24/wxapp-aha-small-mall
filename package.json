@@ -1,0 +1,25 @@
+{
+  "name": "wxapp-aha-small-mall",
+  "version": "1.0.0",
+  "description": "wxapp-aha-samll-mall",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllenWong24/wxapp-aha-small-mall.git"
+  },
+  "author": "Allen Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AllenWong24/wxapp-aha-small-mall/issues"
+  },
+  "homepage": "https://github.com/AllenWong24/wxapp-aha-small-mall#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
